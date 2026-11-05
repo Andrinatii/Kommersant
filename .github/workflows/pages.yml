@@ -22,7 +22,7 @@ jobs:
         run: |
           cat kommersant-pages.zip.part1 kommersant-pages.zip.part2 > /tmp/game.zip
           mkdir public
-          unzip -q /tmp/game.zip -d public
+          unzip -oq /tmp/game.zip -d public
           test -f public/index.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
